@@ -1,0 +1,15 @@
+com\exceptions\HomeNotInitializedException.class
+com\Main.class
+com\model\IdealSettle.class
+com\model\Room.class
+com\interfaces\BeforBedRoutine.class
+com\characters\Name.class
+com\exceptions\InvalidSettleException.class
+com\characters\Mother.class
+com\characters\Carlson.class
+com\characters\UncleJulius.class
+com\model\Home.class
+com\characters\Person.class
+com\characters\Kid.class
+com\exceptions\CharacterNotResidentException.class
+com\characters\FrekenBock.class
