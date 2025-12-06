@@ -6,7 +6,7 @@ import com.model.Home;
 public abstract class Person{
     private Name name;
     private boolean isAsleep = false;
-    protected Home home;
+    protected Home home;//protected because mother
     public Person(Name name, Home home){
         this.name = name;
         this.home = home;
@@ -28,7 +28,16 @@ public abstract class Person{
         this.isAsleep = isAsleep;
     }
 
-    // public void setHome(Home home){
-    //     this.home = home;
-    // }
+    @Override
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return name.equals(person.name) && home.equals(person.home); 
+    }
+
+    @Override
+    public int HashCode(){
+        return Object.hash(name, home);
+    }
 }

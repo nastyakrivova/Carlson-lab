@@ -94,4 +94,14 @@ public class Home{
     public Map<Name, Room> getIdealSettle(){
         return idealSettle.idealSettle();
     }
+
+    @Override
+    public boolean equals(Object o){
+        if(this == o) return true;
+    }
+
+    @Override
+    public int HashCode(){
+        return Object.hash();
+    }
 }

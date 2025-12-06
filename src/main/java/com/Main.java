@@ -35,6 +35,7 @@ public class Main{
         frekenBock.goToSleep();
 
         carlson.listenToHallwayNoise(home);
+        carlson.toString();//just for check
         
     }
 }
