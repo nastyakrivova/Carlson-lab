@@ -9,7 +9,7 @@ public class Carlson extends Person{
     }
 
     public void listenToHallwayNoise(Home home){
-        if(home.getNoiseInHallway()){
+        if (home != null && home.getNoiseInHallway()) {
             System.out.println("Carlson hears footsteps in the hallway and hides in a closet");
         }
     }
