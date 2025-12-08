@@ -41,12 +41,18 @@ public class Mother extends Person{
 
 
     private void fixIdealSettle(List<Name> missing, Home home){
-        Map<Name, Room> ideal = home.getIdealSettle();
+        Map<Name, Room> ideal = home.getIdealSettleMap();
         Map<Name, Room> newIdeal = new HashMap<>(ideal);
 
         for (Name person: missing){
             newIdeal.put(person, Room.LIVINGROOM);
         }
         home.setIdealSettle(newIdeal);
+        try{
+            home.changeCurrSettle();
+        }catch(CharacterNotResidentException e){
+            System.err.println("Failed to apply fixed settlement: " + e.getMessage());
+        }
+        
     }
 }

@@ -4,7 +4,6 @@ com\model\IdealSettle.class
 com\model\Room.class
 com\interfaces\BeforBedRoutine.class
 com\characters\Name.class
-com\exceptions\InvalidSettleException.class
 com\characters\Mother.class
 com\characters\Carlson.class
 com\characters\UncleJulius.class

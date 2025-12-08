@@ -89,8 +89,12 @@ public class Home{
         this.isNoiseInHallway = isNoiseInHallway;
     }
 
-    public Map<Name, Room> getIdealSettle(){
+    public Map<Name, Room> getIdealSettleMap(){
         return idealSettle.idealSettle();
+    }
+
+    public IdealSettle getIdealSettle(){
+        return idealSettle;
     }
 
     @Override

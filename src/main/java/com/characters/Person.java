@@ -44,6 +44,6 @@ public abstract class Person{
 
     @Override
     public String toString(){
-        return name.toString();
+        return "name: " + name.toString();
     }
 }
