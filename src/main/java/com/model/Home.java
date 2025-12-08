@@ -85,8 +85,6 @@ public class Home{
         return this.isNoiseInHallway;
     }
 
-
-
     public void setNoiseInHallway(boolean isNoiseInHallway){
         this.isNoiseInHallway = isNoiseInHallway;
     }
@@ -98,10 +96,24 @@ public class Home{
     @Override
     public boolean equals(Object o){
         if(this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Home home = (Home) o;
+        return Objects.equals(currentSettlement, home.currentSettlement) &&
+                Objects.equals(residents, home.residents) &&
+                Objects.equals(idealSettle, home.idealSettle) &&
+                Objects.equals(isNoiseInHallway, home.isNoiseInHallway); 
     }
 
     @Override
-    public int HashCode(){
-        return Object.hash();
+    public int hashCode(){
+        return Objects.hash(currentSettlement, residents, idealSettle, isNoiseInHallway);
+    }
+
+    @Override
+    public String toString(){
+        return "Home{ currentSettlement: " + currentSettlement.toString() +
+                "residents: " + residents.toString() +
+                "idealSettle: " + idealSettle.toString() +
+                "isNoiseInHallway" + isNoiseInHallway + " }";
     }
 }

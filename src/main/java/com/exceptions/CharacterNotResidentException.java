@@ -13,4 +13,9 @@ public class CharacterNotResidentException extends Exception{
     public List<Name> getMissingResidents() {
         return missingResidents;
     }
+
+    @Override
+    public String getMessage(){
+        return super.getMessage() + "missing residents: " + missingResidents.toString();
+    }
 }

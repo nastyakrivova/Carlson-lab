@@ -1,5 +1,6 @@
 package com.characters;
 
+import java.util.Objects;
 
 import com.model.Home;
 
@@ -37,7 +38,12 @@ public abstract class Person{
     }
 
     @Override
-    public int HashCode(){
-        return Object.hash(name, home);
+    public int hashCode(){
+        return Objects.hash(name, home);
+    }
+
+    @Override
+    public String toString(){
+        return name.toString();
     }
 }

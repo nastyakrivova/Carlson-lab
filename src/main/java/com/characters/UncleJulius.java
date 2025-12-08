@@ -1,5 +1,7 @@
 package com.characters;
 
+import java.util.Objects;
+
 import com.interfaces.BeforBedRoutine;
 import com.model.Home;
 
@@ -31,5 +33,24 @@ public class UncleJulius extends Person implements BeforBedRoutine{
 
     public void showTirednessReason(){
         System.out.println("Uncle Julius is tired because: " + this.tirednessReason);
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)){return false;}
+        UncleJulius person = (UncleJulius) o;
+        return tirednessReason.equals(person.tirednessReason); 
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(super.hashCode(), tirednessReason);
+    }
+
+    @Override
+    public String toString(){
+        return "UncleJulius{ " + super.toString() + "tirednessReason: " + tirednessReason + " }";
     }
 }

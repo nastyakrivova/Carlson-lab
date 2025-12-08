@@ -3,9 +3,6 @@ package com.characters;
 import com.model.*;
 
 public class Carlson extends Person{
-    // public Carlson(Name name, Home home){
-    //     super(name);
-    // }
 
     public Carlson(Name name){
         super(name);
