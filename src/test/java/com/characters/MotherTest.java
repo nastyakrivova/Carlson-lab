@@ -2,7 +2,6 @@ package com.characters;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import org.mockito.*;
 import static org.mockito.Mockito.*;
 import java.util.*;
 
