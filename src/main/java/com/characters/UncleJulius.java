@@ -29,6 +29,9 @@ public class UncleJulius extends Person implements BeforBedRoutine{
     public void goToSleep(){
         System.out.println("Uncle Julius is going to bed");
         setIsAsleep(true);;
+        if (home != null){
+            home.setNoiseInHallway(false);
+        }
     }
 
     public void showTirednessReason(){

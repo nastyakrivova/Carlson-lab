@@ -20,7 +20,7 @@ public class FrekenBockTest {
     }
 
     @Test
-    void createFrekenBock() {
+    void testCreateFrekenBock() {
         assertNotNull(frekenBock);
     }
 
@@ -36,7 +36,7 @@ public class FrekenBockTest {
     }
 
     @Test 
-    void kissGoodNightWithNullHome(){
+    void testKissGoodNightWithNullHome(){
         FrekenBock frekenBockNoHome = new FrekenBock(Name.FREKEN_BOCK);
         assertDoesNotThrow(() -> frekenBockNoHome.kissGoodNight());
     }
@@ -44,5 +44,36 @@ public class FrekenBockTest {
     @Test
     void testShowTirednessReason() {
         assertDoesNotThrow(() -> frekenBock.showTirednessReason());
+    }
+
+
+    @Test
+    void testEqualsSameObject() {
+        FrekenBock frekenBock2 = new FrekenBock(Name.FREKEN_BOCK, mockHome, tirednessReason);
+        assertEquals(frekenBock, frekenBock2);
+    }
+
+    @Test
+    void testEqualsWhenNull() {
+        assertNotEquals(frekenBock, null);
+    }
+
+    @Test
+    void testEqualsDifferentClass() {
+        UncleJulius uncleJulius = new UncleJulius(Name.UNCLE_JULIUS, mockHome, tirednessReason);
+        assertNotEquals(frekenBock, uncleJulius);
+    }
+
+    @Test
+    void testEqualsDifferentTirednessReason() {
+        FrekenBock differentFreken = new FrekenBock(Name.FREKEN_BOCK, mockHome, "different reason");
+        assertNotEquals(frekenBock, differentFreken);
+    }
+
+    @Test
+    void testHashCode() {
+        FrekenBock frekenBock2 = new FrekenBock(Name.FREKEN_BOCK, mockHome, tirednessReason);
+        assertTrue(frekenBock.equals(frekenBock2));
+        assertEquals(frekenBock.hashCode(), frekenBock2.hashCode());
     }
 }

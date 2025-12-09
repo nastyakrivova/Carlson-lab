@@ -28,7 +28,10 @@ public class FrekenBock extends Person implements BeforBedRoutine{
     @Override
     public void goToSleep(){
         System.out.println("Freken Bock is going to bed");
-        setIsAsleep(true);;
+        setIsAsleep(true);
+        if (home != null){
+            home.setNoiseInHallway(false);
+        }
     }
 
     public void showTirednessReason(){

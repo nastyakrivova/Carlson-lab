@@ -1,9 +1,5 @@
 package com;
 
-
-// import java.util.ArrayList;
-// import java.util.List;
-
 import com.characters.*;
 import com.model.*;
 
@@ -22,7 +18,7 @@ public class Main{
         Carlson carlson = new Carlson(Name.CARLSON);
         home.addResident(carlson.getName());
 
-        home.randomSattle();//show settle will be inside random and create and manage?
+        home.randomSattle();
         mother.createIdealSettle(home);
         mother.manageSettlement(home);
 
@@ -35,8 +31,7 @@ public class Main{
         frekenBock.goToSleep();
 
         carlson.listenToHallwayNoise(home);
-        System.out.println(carlson.toString());//just for check
-        System.out.println(home.toString());//just for check
+        System.out.println(home.toString());
         
     }
 }

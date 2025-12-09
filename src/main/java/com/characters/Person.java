@@ -7,7 +7,7 @@ import com.model.Home;
 public abstract class Person{
     private Name name;
     private boolean isAsleep = false;
-    protected Home home;//protected because mother
+    protected Home home;
     public Person(Name name, Home home){
         this.name = name;
         this.home = home;

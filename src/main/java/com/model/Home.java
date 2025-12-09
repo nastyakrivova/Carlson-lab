@@ -115,9 +115,9 @@ public class Home{
 
     @Override
     public String toString(){
-        return "Home{ currentSettlement: " + currentSettlement.toString() +
-                "residents: " + residents.toString() +
-                "idealSettle: " + idealSettle.toString() +
-                "isNoiseInHallway" + isNoiseInHallway + " }";
+        return "Home{ currentSettlement: " + currentSettlement.toString() + '\n' +
+                "residents: " + residents.toString() +  '\n' +
+                "idealSettle: " + idealSettle.toString() +  '\n' +
+                "isNoiseInHallway" + isNoiseInHallway + " }" +  '\n';
     }
 }

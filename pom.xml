@@ -4,10 +4,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com</groupId>
-  <artifactId>karlson_plot</artifactId>
+  <artifactId>carlson_plot</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>karlson_plot</name>
+  <name>carlson_plot</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
